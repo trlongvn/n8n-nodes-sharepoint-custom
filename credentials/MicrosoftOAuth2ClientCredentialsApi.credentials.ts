@@ -21,6 +21,7 @@ export class MicrosoftOAuth2ClientCredentialsApi implements ICredentialType {
 		// Info about the tenantID
 		// https://learn.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-client-creds-grant-flow
 		// For client credentials flow, we typically use organization-specific tenant ID
+		// But you can also use 'organizations', 'common', or 'consumers' for multi-tenant scenarios
 		{
 			displayName: 'Access Token URL',
 			name: 'accessTokenUrl',

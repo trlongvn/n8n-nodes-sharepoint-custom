@@ -45,6 +45,8 @@ Before configuring this credential, you need to:
 
    - **Access Token URL**: `https://login.microsoftonline.com/{tenant}/oauth2/v2.0/token`
      - Replace `{tenant}` with your Azure AD tenant ID or domain name
+     - For single-tenant apps: Use your specific tenant ID (e.g., `12345678-1234-1234-1234-123456789abc`)
+     - For multi-tenant apps: Use `organizations`, `common`, or `consumers`
      - Example: `https://login.microsoftonline.com/12345678-1234-1234-1234-123456789abc/oauth2/v2.0/token`
    
    - **Client ID**: Your application (client) ID from Azure AD
