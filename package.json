@@ -1,0 +1,50 @@
+{
+	"name": "n8n-nodes-sharepoint-custom",
+	"version": "0.1.0",
+	"description": "n8n nodes for Microsoft SharePoint with custom OAuth2 client credentials authentication",
+	"license": "MIT",
+	"homepage": "https://github.com/trlongvn/n8n-nodes-sharepoint-custom",
+	"keywords": [
+		"n8n-community-node-package",
+		"n8n",
+		"sharepoint",
+		"microsoft",
+		"oauth2"
+	],
+	"author": {
+		"name": "trlongvn"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/trlongvn/n8n-nodes-sharepoint-custom.git"
+	},
+	"scripts": {
+		"build": "tsc && gulp build:icons",
+		"build:watch": "tsc --watch",
+		"dev": "npm run build",
+		"lint": "eslint credentials --ext .ts",
+		"lint:fix": "eslint credentials --ext .ts --fix",
+		"format": "prettier --write \"credentials/**/*.ts\""
+	},
+	"files": [
+		"dist"
+	],
+	"n8n": {
+		"n8nNodesApiVersion": 1,
+		"credentials": [
+			"dist/credentials/MicrosoftOAuth2ClientCredentialsApi.credentials.js"
+		]
+	},
+	"devDependencies": {
+		"@typescript-eslint/eslint-plugin": "^6.0.0",
+		"@typescript-eslint/parser": "^6.0.0",
+		"eslint": "^8.45.0",
+		"prettier": "^3.0.0",
+		"typescript": "^5.1.6",
+		"gulp": "^4.0.2",
+		"n8n-workflow": "^1.0.0"
+	},
+	"peerDependencies": {
+		"n8n-workflow": "*"
+	}
+}
