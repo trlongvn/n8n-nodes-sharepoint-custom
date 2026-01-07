@@ -133,4 +133,4 @@ Make sure your Azure AD app has the appropriate **Application permissions** gran
 
 4. **Test with Graph Explorer**: Use [Microsoft Graph Explorer](https://developer.microsoft.com/en-us/graph/graph-explorer) to test your API calls before implementing in n8n.
 
-5. **Check API Documentation**: Always refer to the [Microsoft Graph API documentation](https://docs.microsoft.com/en-us/graph/api/overview) for the latest endpoints and required permissions.
+5. **Check API Documentation**: Always refer to the [Microsoft Graph API documentation](https://learn.microsoft.com/en-us/graph/api/overview) for the latest endpoints and required permissions.

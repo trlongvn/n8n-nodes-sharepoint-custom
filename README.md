@@ -128,8 +128,8 @@ npm run build:watch
 ## Resources
 
 - [n8n Community Nodes Documentation](https://docs.n8n.io/integrations/community-nodes/)
-- [Microsoft Identity Platform - Client Credentials Flow](https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-client-creds-grant-flow)
-- [Microsoft Graph API Documentation](https://docs.microsoft.com/en-us/graph/)
+- [Microsoft Identity Platform - Client Credentials Flow](https://learn.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-client-creds-grant-flow)
+- [Microsoft Graph API Documentation](https://learn.microsoft.com/en-us/graph/)
 
 ## License
 

@@ -5,7 +5,7 @@ export class MicrosoftOAuth2ClientCredentialsApi implements ICredentialType {
 
 	extends = ['oAuth2Api'];
 
-	icon: Icon = 'file:icons/Microsoft.svg';
+	icon: Icon = 'file:Microsoft.svg';
 
 	displayName = 'Microsoft OAuth2 API (Client Credentials)';
 
@@ -19,7 +19,7 @@ export class MicrosoftOAuth2ClientCredentialsApi implements ICredentialType {
 			default: 'clientCredentials',
 		},
 		// Info about the tenantID
-		// https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-v2-protocols#endpoints
+		// https://learn.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-client-creds-grant-flow
 		// For client credentials flow, we typically use organization-specific tenant ID
 		{
 			displayName: 'Access Token URL',
