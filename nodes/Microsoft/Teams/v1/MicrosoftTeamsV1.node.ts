@@ -26,7 +26,7 @@ const versionDescription: INodeTypeDescription = {
 	name: 'microsoftTeams',
 	icon: 'file:teams.svg',
 	group: ['input'],
-	version: [1, 1.1],
+	version: [1, 2],
 	subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
 	description: 'Consume Microsoft Teams API',
 	defaults: {
@@ -383,7 +383,7 @@ export class MicrosoftTeamsV1 implements INodeType {
 
 						let includeLinkToWorkflow = options.includeLinkToWorkflow;
 						if (includeLinkToWorkflow === undefined) {
-							includeLinkToWorkflow = nodeVersion >= 1.1;
+							includeLinkToWorkflow = nodeVersion > 1;
 						}
 
 						const body: IDataObject = prepareMessage.call(
@@ -445,7 +445,7 @@ export class MicrosoftTeamsV1 implements INodeType {
 						const options = this.getNodeParameter('options', i, {});
 
 						const includeLinkToWorkflow =
-							options.includeLinkToWorkflow !== false && nodeVersion >= 1.1;
+							options.includeLinkToWorkflow !== false && nodeVersion > 1;
 
 						const body: IDataObject = prepareMessage.call(
 							this,

@@ -229,7 +229,7 @@ export async function execute(
 
 	let range = '';
 
-	if (nodeVersion >= 2.2) {
+	if (nodeVersion > 2) {
 		range = findAppendRange(address, {
 			cols: values[0]?.length ?? 0,
 			rows: values?.length ?? 0,

@@ -17,7 +17,6 @@ export class MicrosoftTeams extends VersionedNodeType {
 
 		const nodeVersions: IVersionedNodeType['nodeVersions'] = {
 			1: new MicrosoftTeamsV1(baseDescription),
-			1.1: new MicrosoftTeamsV1(baseDescription),
 			2: new MicrosoftTeamsV2(baseDescription),
 		};
 

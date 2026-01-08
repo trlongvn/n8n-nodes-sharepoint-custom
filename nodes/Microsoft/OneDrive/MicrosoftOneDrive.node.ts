@@ -19,7 +19,7 @@ export class MicrosoftOneDrive implements INodeType {
 		name: 'microsoftOneDrive',
 		icon: 'file:oneDrive.svg',
 		group: ['input'],
-		version: [1, 1.1],
+		version: [1, 2],
 		subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
 		description: 'Consume Microsoft OneDrive API',
 		defaults: {
@@ -218,7 +218,7 @@ export class MicrosoftOneDrive implements INodeType {
 							const body = await this.helpers.getBinaryDataBuffer(i, binaryPropertyName);
 							let encodedFilename;
 
-							if (nodeVersion >= 1.1) {
+							if (nodeVersion > 1) {
 								if (fileName !== '') {
 									encodedFilename = encodeURIComponent(fileName);
 								} else if (binaryData.fileName !== undefined) {

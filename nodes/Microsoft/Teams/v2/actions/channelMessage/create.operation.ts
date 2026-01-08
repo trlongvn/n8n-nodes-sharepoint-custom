@@ -92,7 +92,7 @@ export async function execute(
 
 	let includeLinkToWorkflow = options.includeLinkToWorkflow;
 	if (includeLinkToWorkflow === undefined) {
-		includeLinkToWorkflow = nodeVersion >= 1.1;
+		includeLinkToWorkflow = nodeVersion > 1;
 	}
 
 	const body: IDataObject = prepareMessage.call(
