@@ -5,7 +5,7 @@ export class MicrosoftGraphSecurityOAuth2Api implements ICredentialType {
 
 	displayName = 'Microsoft Graph Security OAuth2 API';
 
-	extends = ['microsoftOAuth2Api'];
+	extends = ['microsoftOAuth2ClientCredentialsApi'];
 
 	documentationUrl = 'microsoft';
 

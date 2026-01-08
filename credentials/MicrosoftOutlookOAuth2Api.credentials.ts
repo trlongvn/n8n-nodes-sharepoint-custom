@@ -18,7 +18,7 @@ const scopes = [
 export class MicrosoftOutlookOAuth2Api implements ICredentialType {
 	name = 'microsoftOutlookOAuth2Api';
 
-	extends = ['microsoftOAuth2Api'];
+	extends = ['microsoftOAuth2ClientCredentialsApi'];
 
 	displayName = 'Microsoft Outlook OAuth2 API';
 
