@@ -1,7 +1,7 @@
 {
 	"name": "n8n-nodes-sharepoint-custom",
 	"version": "0.1.0",
-	"description": "n8n nodes for Microsoft SharePoint with custom OAuth2 client credentials authentication",
+	"description": "n8n nodes for Microsoft services with OAuth2 authentication - forked from n8n-io/n8n",
 	"license": "MIT",
 	"homepage": "https://github.com/trlongvn/n8n-nodes-sharepoint-custom",
 	"keywords": [
@@ -9,7 +9,14 @@
 		"n8n",
 		"sharepoint",
 		"microsoft",
-		"oauth2"
+		"oauth2",
+		"onedrive",
+		"teams",
+		"outlook",
+		"excel",
+		"dynamics",
+		"entra",
+		"graph"
 	],
 	"author": {
 		"name": "trlongvn"
@@ -22,9 +29,9 @@
 		"build": "tsc && gulp build:icons",
 		"build:watch": "tsc --watch",
 		"dev": "npm run build",
-		"lint": "eslint credentials --ext .ts",
-		"lint:fix": "eslint credentials --ext .ts --fix",
-		"format": "prettier --write \"credentials/**/*.ts\""
+		"lint": "eslint credentials nodes --ext .ts",
+		"lint:fix": "eslint credentials nodes --ext .ts --fix",
+		"format": "prettier --write \"{credentials,nodes}/**/*.ts\""
 	},
 	"files": [
 		"dist"
@@ -32,19 +39,53 @@
 	"n8n": {
 		"n8nNodesApiVersion": 1,
 		"credentials": [
-			"dist/credentials/MicrosoftOAuth2ClientCredentialsApi.credentials.js"
+			"dist/credentials/MicrosoftOAuth2Api.credentials.js",
+			"dist/credentials/MicrosoftOAuth2ClientCredentialsApi.credentials.js",
+			"dist/credentials/MicrosoftSharePointOAuth2Api.credentials.js",
+			"dist/credentials/MicrosoftOneDriveOAuth2Api.credentials.js",
+			"dist/credentials/MicrosoftToDoOAuth2Api.credentials.js",
+			"dist/credentials/MicrosoftExcelOAuth2Api.credentials.js",
+			"dist/credentials/MicrosoftTeamsOAuth2Api.credentials.js",
+			"dist/credentials/MicrosoftOutlookOAuth2Api.credentials.js",
+			"dist/credentials/MicrosoftEntraOAuth2Api.credentials.js",
+			"dist/credentials/MicrosoftDynamicsOAuth2Api.credentials.js",
+			"dist/credentials/MicrosoftGraphSecurityOAuth2Api.credentials.js"
+		],
+		"nodes": [
+			"dist/nodes/Microsoft/SharePoint/MicrosoftSharePoint.node.js",
+			"dist/nodes/Microsoft/OneDrive/MicrosoftOneDrive.node.js",
+			"dist/nodes/Microsoft/OneDrive/MicrosoftOneDriveTrigger.node.js",
+			"dist/nodes/Microsoft/ToDo/MicrosoftToDo.node.js",
+			"dist/nodes/Microsoft/Excel/MicrosoftExcel.node.js",
+			"dist/nodes/Microsoft/Teams/MicrosoftTeams.node.js",
+			"dist/nodes/Microsoft/Teams/MicrosoftTeamsTrigger.node.js",
+			"dist/nodes/Microsoft/Outlook/MicrosoftOutlook.node.js",
+			"dist/nodes/Microsoft/Outlook/MicrosoftOutlookTrigger.node.js",
+			"dist/nodes/Microsoft/Entra/MicrosoftEntra.node.js",
+			"dist/nodes/Microsoft/Dynamics/MicrosoftDynamicsCrm.node.js",
+			"dist/nodes/Microsoft/GraphSecurity/MicrosoftGraphSecurity.node.js"
 		]
 	},
 	"devDependencies": {
+		"@types/lodash": "^4.17.21",
+		"@types/luxon": "^3.7.1",
+		"@types/node": "^25.0.3",
+		"@types/xml2js": "^0.4.14",
 		"@typescript-eslint/eslint-plugin": "^6.0.0",
 		"@typescript-eslint/parser": "^6.0.0",
 		"eslint": "^8.45.0",
-		"prettier": "^3.0.0",
-		"typescript": "^5.1.6",
 		"gulp": "^4.0.2",
-		"n8n-workflow": "^1.0.0"
+		"n8n-workflow": "^1.0.0",
+		"prettier": "^3.0.0",
+		"typescript": "^5.1.6"
 	},
 	"peerDependencies": {
 		"n8n-workflow": "*"
+	},
+	"dependencies": {
+		"lodash": "^4.17.21",
+		"luxon": "^3.7.2",
+		"moment-timezone": "^0.6.0",
+		"xml2js": "^0.6.2"
 	}
 }
