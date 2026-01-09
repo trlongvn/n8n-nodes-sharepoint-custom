@@ -19,7 +19,7 @@ export class MicrosoftEntraOAuth2Api implements ICredentialType {
 
 	displayName = 'Microsoft Entra ID (Azure Active Directory) API';
 
-	extends = ['microsoftOAuth2Api'];
+	extends = ['microsoftOAuth2ClientCredentialsApi'];
 
 	documentationUrl = 'microsoftentra';
 

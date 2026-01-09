@@ -3,7 +3,7 @@ import type { Icon, ICredentialType, INodeProperties } from 'n8n-workflow';
 export class MicrosoftSharePointOAuth2Api implements ICredentialType {
 	name = 'microsoftSharePointOAuth2Api';
 
-	extends = ['microsoftOAuth2Api'];
+	extends = ['microsoftOAuth2ClientCredentialsApi'];
 
 	icon: Icon = {
 		light: 'file:icons/microsoftSharePoint.svg',
